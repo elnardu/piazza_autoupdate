@@ -7,7 +7,8 @@ import requests
 TEMPLATE = """
 <p style="font-weight: bold; font-size: 4em;">{days}</p>
 <br/>
-<p>This post automatically updates. All changes will be overridden.</p>
+<p>This post automatically updates. All changes will be removed.</p>
+<p>Source:&nbsp;<a href="https://github.com/elnardu/piazza_autoupdate" target="_blank" rel="noreferrer">https://github.com/elnardu/piazza_autoupdate</a></p>
 """
 
 with open('config.json', 'r') as f:
