@@ -76,7 +76,7 @@ def main():
         midnight = datetime.datetime(year=tomorrow.year, month=tomorrow.month, 
                         day=tomorrow.day, hour=0, minute=0, second=0)
         secondsTillMidnight = (midnight - datetime.datetime.now()).seconds
-        time.sleep(secondsTillMidnight)
+        time.sleep(secondsTillMidnight + 10)
 
         updatePost()
 
