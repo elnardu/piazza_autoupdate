@@ -11,6 +11,8 @@ TEMPLATE = """
 <p>Source:&nbsp;<a href="https://github.com/elnardu/piazza_autoupdate" target="_blank" rel="noreferrer">https://github.com/elnardu/piazza_autoupdate</a></p>
 """
 
+DATE = datetime.date(2018, 11, 27)
+
 with open('config.json', 'r') as f:
     config = json.load(f)
 
@@ -64,9 +66,9 @@ def updatePost():
         "method": "content.update",
         "params": {
             "cid": "jnj3uc5rdipis",
-            "subject": "Days Since Last Project Issue",
+            "subject": "Days Since Last Project Issue: {}".format((datetime.date.today() - DATE).days),
             "content": TEMPLATE.format(
-                days=(datetime.date.today() - datetime.date(2018, 11, 27)).days
+                days=(datetime.date.today() - DATE).days
             ),
             "anonymous": "no",
             "type": "note",
